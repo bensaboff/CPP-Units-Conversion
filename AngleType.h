@@ -65,5 +65,6 @@ UNIT_TEMPLATE(Angle, Radians, 1.0, rad); // 2pi radians for a full circle
 UNIT_TEMPLATE(Angle, Degrees, (3.1415926535897932384626433832795028841971/180.0), deg); // 360 degrees for a full circle
 UNIT_TEMPLATE(Angle, Milliradians, (3.1415926535897932384626433832795028841971/3200.0), mil); // 6,400 milliradians for a full circle
 UNIT_TEMPLATE(Angle, BAMS, 3.1415926535897932384626433832795028841971, bams); // 2 for a full circle
+UNIT_TEMPLATE(Angle, Revolution, (3.1415926535897932384626433832795028841971 * 2.0), rev); // Full circle
 
 #endif  // ANGLETYPE_H_GUARD
