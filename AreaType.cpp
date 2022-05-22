@@ -14,19 +14,8 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
-#include "MassType.h"
-#include "AccelerationType.h"
-#include "ForceType.h"
+#include "AreaType.h"
 
 namespace Units
 {
-    Mass Force::operator/(const Acceleration& acceleration) const
-    {
-        return Kilograms(m_value / acceleration.BaseValue());
-    }
-
-    Acceleration Force::operator/(const Mass& mass) const
-    {
-        return MetersPerSecondSquared(m_value / Kilograms(mass));
-    }
 } //end namespace Units

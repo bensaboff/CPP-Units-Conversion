@@ -20,9 +20,15 @@ limitations under the License.
 
 namespace Units
 {
+   class Mass;
+   class Acceleration;
+
    class Force
    {
    public:
+
+      Mass operator/(const Acceleration& acceleration) const;
+      Acceleration operator/(const Mass& mass) const;
 
       GENERIC_OPERATORS(Force);
    };
