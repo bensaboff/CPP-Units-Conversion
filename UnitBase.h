@@ -58,7 +58,7 @@ limitations under the License.
 \
          return *this;\
       }\
-      constexpr T& operator+=(const T& rhs)\
+      T& operator+=(const T& rhs)\
       {\
          if (&rhs != this)\
          {\
@@ -67,7 +67,7 @@ limitations under the License.
 \
          return *this;\
       }\
-      constexpr T& operator-=(const T& rhs)\
+      T& operator-=(const T& rhs)\
       {\
          if (&rhs != this)\
          {\
