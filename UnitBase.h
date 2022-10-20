@@ -25,7 +25,7 @@ limitations under the License.
       /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */\
       T() : m_value(0.0) {}\
       T(const T & rhs) { m_value = rhs.BaseValue(); }\
-      virtual ~T() {}\
+      ~T() {}\
 \
       /* Function to always return zero                                        */\
       /* This is a common value to checkand use of this function will prevent  */\
@@ -36,9 +36,9 @@ limitations under the License.
       /* Operator Override Methods */\
       /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/\
       double BaseValue() const { return m_value; }\
-      virtual double value() const { return m_value; }\
+      double value() const { return m_value; }\
       /* This assumes the base type and only used if not created as a specific unit */\
-      virtual void SetValue(double input) { m_value = input; }\
+      void SetValue(double input) { m_value = input; }\
 \
       T& operator=(const T& rhs)\
       {\
@@ -137,15 +137,15 @@ namespace Units\
       TypeName(const Base&& rhs) : Base(rhs.BaseValue()) { }\
    \
       TypeName(double input) { m_value = (equation_to_base); }\
-      virtual ~TypeName() {}\
+      ~TypeName() {}\
    \
       TypeName operator*(double rhs) const { return TypeName(value() * rhs); }\
       TypeName operator/(double rhs) const { return TypeName(value() / rhs); }\
    \
-      virtual double value() const override { return (equation_from_base); }\
+      double value() const { return (equation_from_base); }\
       operator double() const { return value(); }\
    \
-      virtual void SetValue(double input) { m_value = (equation_to_base); }\
+      void SetValue(double input) { m_value = (equation_to_base); }\
    };\
 \
    namespace Literals\
