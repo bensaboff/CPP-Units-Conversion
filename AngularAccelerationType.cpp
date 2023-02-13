@@ -14,14 +14,14 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
-#include "AngleType.h"
+#include "AngularAccelerationType.h"
 #include "AngularSpeedType.h"
 #include "TimeType.h"
 
 namespace Units
 {
-   AngularSpeed Angle::operator/(const Time& time) const
+   AngularSpeed AngularAcceleration::operator*(const Time& time) const
    {
-      return DegreesPerSecond(m_value / time.BaseValue());
+      return DegreesPerSecond(m_value * time.BaseValue());
    }
 } //end namespace Units
