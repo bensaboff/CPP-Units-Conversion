@@ -35,7 +35,7 @@ namespace Units
 } //end namespace Units
 UNIT_TEMPLATE(AngularAcceleration, DegreesPerSecondSquared, 1.0, deg_s2);
 UNIT_TEMPLATE(AngularAcceleration, DegreesPerMinuteSquared, 3600.0, deg_m2);
-UNIT_TEMPLATE(AngularAcceleration, DegreesPerHourSquared, 12960000,0, deg_hr2);
+UNIT_TEMPLATE(AngularAcceleration, DegreesPerHourSquared, 12960000.0, deg_hr2);
 UNIT_TEMPLATE(AngularAcceleration, RadiansPerSecondSquared, (180.0 / 3.1415926535897932384626433832795028841971), rad_s2);
 UNIT_TEMPLATE(AngularAcceleration, MilliradiansPerSecondSquared, (180.0 / 3200.0), mil_s2);
 UNIT_TEMPLATE(AngularAcceleration, BAMS_PerSecondSquared, (180.0), bams_s2);
