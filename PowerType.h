@@ -37,7 +37,7 @@ UNIT_TEMPLATE_EQUATION(Power, decibelMilliwatts, (std::pow(10, (input / 10.0)) *
 //Metric
 UNIT_TEMPLATE(Power, GigaWatts, (double(std::giga::num) / double(std::giga::den)), GW);
 UNIT_TEMPLATE(Power, MegaWatts, (double(std::mega::num) / double(std::mega::den)), MW);
-UNIT_TEMPLATE(Power, KiloWatts, (double(std::kilo::num) / double(std::kilo::den)), KW);
+UNIT_TEMPLATE(Power, KiloWatts, (double(std::kilo::num) / double(std::kilo::den)), kW);
 UNIT_TEMPLATE(Power, HectoWatts, (double(std::hecto::num) / double(std::hecto::den)), HW);
 UNIT_TEMPLATE(Power, DecaWatts, (double(std::deca::num) / double(std::deca::den)), DW);
 UNIT_TEMPLATE(Power, Watts, 1.0, W);

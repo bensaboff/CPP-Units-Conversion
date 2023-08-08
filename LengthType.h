@@ -57,7 +57,7 @@ UNIT_TEMPLATE(Length, Inches, (0.3048 / 12.0), in);  // Feet/12
 //Metric
 UNIT_TEMPLATE(Length, Gigameters, (double(std::giga::num) / double(std::giga::den)), Gm);
 UNIT_TEMPLATE(Length, Megameters, (double(std::mega::num) / double(std::mega::den)), Mm);
-UNIT_TEMPLATE(Length, Kilometers, (double(std::kilo::num) / double(std::kilo::den)), Km);
+UNIT_TEMPLATE(Length, Kilometers, (double(std::kilo::num) / double(std::kilo::den)), km);
 UNIT_TEMPLATE(Length, Hectometers, (double(std::hecto::num) / double(std::hecto::den)), Hm);
 UNIT_TEMPLATE(Length, Decameters, (double(std::deca::num) / double(std::deca::den)), Dm);
 UNIT_TEMPLATE(Length, Meters, 1.0, m);

@@ -43,7 +43,7 @@ UNIT_TEMPLATE(Volume, CubicInches, (3.785411784 / 231.0), in3);
 //Metric
 UNIT_TEMPLATE(Volume, Gigaliters, (double(std::giga::num) / double(std::giga::den)), GL);
 UNIT_TEMPLATE(Volume, Megaliters, (double(std::mega::num) / double(std::mega::den)), ML);
-UNIT_TEMPLATE(Volume, Kiloliters, (double(std::kilo::num) / double(std::kilo::den)), KL);
+UNIT_TEMPLATE(Volume, Kiloliters, (double(std::kilo::num) / double(std::kilo::den)), kL);
 UNIT_TEMPLATE(Volume, Hectoliters, (double(std::hecto::num) / double(std::hecto::den)), HL);
 UNIT_TEMPLATE(Volume, Decaliters, (double(std::deca::num) / double(std::deca::den)), DL);
 UNIT_TEMPLATE(Volume, Liters, 1.0, L);
