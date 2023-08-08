@@ -46,7 +46,7 @@ UNIT_TEMPLATE(Mass, Tonne, 1000000.0, t); // Metric ton
 //Metric
 UNIT_TEMPLATE(Mass, Gigagrams, (double(std::giga::num) / double(std::giga::den)), Gg);
 UNIT_TEMPLATE(Mass, Megagrams, (double(std::mega::num) / double(std::mega::den)), Mg);
-UNIT_TEMPLATE(Mass, Kilograms, (double(std::kilo::num) / double(std::kilo::den)), Kg);
+UNIT_TEMPLATE(Mass, Kilograms, (double(std::kilo::num) / double(std::kilo::den)), kg);
 UNIT_TEMPLATE(Mass, Hectograms, (double(std::hecto::num) / double(std::hecto::den)), Hg);
 UNIT_TEMPLATE(Mass, Decagrams, (double(std::deca::num) / double(std::deca::den)), Dg);
 UNIT_TEMPLATE(Mass, Grams, 1.0, m);
