@@ -22,6 +22,7 @@ namespace Units
 {
    Length Time::operator*(const Speed& speed) const
    {
-      return Meters(m_value * speed.BaseValue());
+      // Base is seconds
+      return Meters(m_value * MetersPerSecond(speed));
    }
 } //end namespace Units
