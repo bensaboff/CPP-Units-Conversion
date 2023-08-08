@@ -25,20 +25,13 @@ limitations under the License.
       /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */\
       T() : m_value(0.0) {}\
       T(const T & rhs) { m_value = rhs.BaseValue(); }\
+      T(const T && rhs) { m_value = rhs.BaseValue(); }\
       ~T() {}\
 \
       /* Function to always return zero                                        */\
       /* This is a common value to checkand use of this function will prevent  */\
       /* the need to instantiate a class just to check against 0               */\
       static T zero() { return T(0.0); }\
-\
-      /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/\
-      /* Operator Override Methods */\
-      /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/\
-      double BaseValue() const { return m_value; }\
-      double value() const { return m_value; }\
-      /* This assumes the base type and only used if not created as a specific unit */\
-      void SetValue(double input) { m_value = input; }\
 \
       T& operator=(const T& rhs)\
       {\
@@ -123,6 +116,14 @@ limitations under the License.
          return *this;\
       }\
 \
+      /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/\
+      /* Operator Override Methods */\
+      /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/\
+      double BaseValue() const { return m_value; }\
+      double value() const { return m_value; }\
+      /* This assumes the base type and only used if not created as a specific unit */\
+      void SetValue(double input) { m_value = input; }\
+\
       double m_value;
 
 
@@ -133,8 +134,8 @@ namespace Units\
    {\
    public:\
       TypeName() : Base(0.0) {}\
-      TypeName(const Base& rhs) : Base(rhs.BaseValue()) { }\
-      TypeName(const Base&& rhs) : Base(rhs.BaseValue()) { }\
+      TypeName(const Base& rhs) : Base(rhs) { }\
+      TypeName(const Base&& rhs) : Base(rhs) { }\
    \
       TypeName(double input) { m_value = (equation_to_base); }\
       ~TypeName() {}\

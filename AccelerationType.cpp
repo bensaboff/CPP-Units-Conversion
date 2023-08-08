@@ -24,7 +24,7 @@ namespace Units
 {
    Speed Acceleration::operator*(const Time& time) const
    {
-      return MetersPerSecond(m_value * time.BaseValue());
+      return MetersPerSecond(m_value * Seconds(time));
    }
    Force Acceleration::operator*(const Mass& mass) const
    {

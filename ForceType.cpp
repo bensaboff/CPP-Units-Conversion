@@ -22,11 +22,13 @@ namespace Units
 {
     Mass Force::operator/(const Acceleration& acceleration) const
     {
-        return Kilograms(m_value / acceleration.BaseValue());
+        // Base is Newtons which is 1 kg * (m/s^2)
+        return Kilograms(m_value / MetersPerSecondSquared(acceleration));
     }
 
     Acceleration Force::operator/(const Mass& mass) const
     {
+       // Base is Newtons which is 1 kg * (m/s^2)
         return MetersPerSecondSquared(m_value / Kilograms(mass));
     }
 } //end namespace Units

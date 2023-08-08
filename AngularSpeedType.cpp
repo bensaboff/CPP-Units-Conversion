@@ -23,10 +23,11 @@ namespace Units
 {
    Angle AngularSpeed::operator*(const Time& time) const
    {
-      return Degrees(m_value * time.BaseValue());
+      // Base is Degrees per Second
+      return Degrees(m_value * Seconds(time));
    }
    AngularAcceleration AngularSpeed::operator/(const Time& time) const
    {
-       return DegreesPerSecondSquared(m_value / time.BaseValue());
+       return DegreesPerSecondSquared(m_value / Seconds(time));
    }
 } //end namespace Units
