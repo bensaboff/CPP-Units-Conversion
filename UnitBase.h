@@ -84,7 +84,7 @@ limitations under the License.
       {\
          return T(m_value - rhs.BaseValue());\
       }\
-   \
+\
       T operator+() const\
       {\
          return T(m_value);\
