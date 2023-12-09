@@ -31,7 +31,7 @@ namespace Units
 } //end namespace Units
 
 // from: https://www.weather.gov/media/epz/wxcalc/tempConvert.pdf
-//To convert between degrees Celsius(°C) --> Kelvin(K) || Rankine (R) || Farenheit (F):
+//To convert between degrees Celsius(Â°C) --> Kelvin(K) || Rankine (R) || Farenheit (F):
 // Updated with International Bureau of Weights and Measures
 //    2019 redefinition of the SI base units
 //    see: https://en.wikipedia.org/wiki/2019_redefinition_of_the_SI_base_units
@@ -50,7 +50,7 @@ namespace Units
 //          Tr is temperature in Rankine
 //          Tf is temperature in Fareneheit
 //
-UNIT_TEMPLATE(Temperature, Celcius, 1.0, degC); // Base Unit
+UNIT_TEMPLATE(Temperature, Celsius, 1.0, degC); // Base Unit
 UNIT_TEMPLATE_EQUATION(Temperature, Kelvin, (input - 273.15), (m_value + 273.15) , degK); //  https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf pg.133
 UNIT_TEMPLATE_EQUATION(Temperature, Farenheit, ((5.0 / 9.0) * (input - 32.0)), ((9.0/5.0 * m_value) + 32), degF); // 
 UNIT_TEMPLATE_EQUATION(Temperature, Rankine, ((5.0/9.0) * ((input - 459.67) - 32.0)), ((((9.0/5.0) * m_value) + 32.0) + 459.67), degR); // https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e2008.pdf pg.66
