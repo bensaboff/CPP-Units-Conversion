@@ -37,7 +37,7 @@ namespace Units
 UNIT_TEMPLATE(Pressure, Atmospheres, 101325.0, atm); // Standard Atmosphere https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9#PRESSURE
 UNIT_TEMPLATE(Pressure, TechnicalAtmospheres, 98066.5, at); // https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9#PRESSURE
 UNIT_TEMPLATE(Pressure, Bars, (100000.0), bar); // https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9#PRESSURE
-UNIT_TEMPLATE(Pressure, PoundsPerSquareInch, (6894.757), PSI); // https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8#P (pound-force per square inch (psi) (lbf/in2) Approximate)
+UNIT_TEMPLATE(Pressure, PoundsPerSquareInch, ((0.45359237 * 9.80665) / (0.0254 * 0.0254)), PSI); // https://en.wikipedia.org/wiki/Pound_per_square_inch#Conversions (pound-force per square inch (psi) (lbf/in2) Exact)
 UNIT_TEMPLATE(Pressure, Torr, (101325.0 / 760.0), Torr); // https://en.wikipedia.org/wiki/Torr#Conversion_factors
 UNIT_TEMPLATE(Pressure, MillimetersMercury, (133.3223684), mmHg); 
 
