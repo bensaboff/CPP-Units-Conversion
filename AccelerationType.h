@@ -45,7 +45,7 @@ UNIT_TEMPLATE(Acceleration, FeetPerSecondSquared, 0.3048, fps2); // (0.3048 m/ft
 UNIT_TEMPLATE(Acceleration, MilesPerHourSquared, (1609.344 / 12960000.0), mph2); // (1609.344 m/mi) / (3600^2 sec^2/hr)
 UNIT_TEMPLATE(Acceleration, KilometersPerHourSquared, (10.0 / 1296.0), kph2); // (1000 m/km) / (3600^2 sec^2/hr)
 UNIT_TEMPLATE(Acceleration, InchesPerSecondSquared, 0.0254, inps2);
-UNIT_TEMPLATE(Acceleration, gal, 0.01, Gal);
+UNIT_TEMPLATE(Acceleration, Galileo, 0.01, Galileo);
 UNIT_TEMPLATE(Acceleration, MetersPerSecondSquared, 1.0, mps2);
 
 
