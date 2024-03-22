@@ -49,7 +49,7 @@ UNIT_TEMPLATE(Mass, Megagrams, (double(std::mega::num) / double(std::mega::den))
 UNIT_TEMPLATE(Mass, Kilograms, (double(std::kilo::num) / double(std::kilo::den)), kg);
 UNIT_TEMPLATE(Mass, Hectograms, (double(std::hecto::num) / double(std::hecto::den)), Hg);
 UNIT_TEMPLATE(Mass, Decagrams, (double(std::deca::num) / double(std::deca::den)), Dg);
-UNIT_TEMPLATE(Mass, Grams, 1.0, m);
+UNIT_TEMPLATE(Mass, Grams, 1.0, g);
 UNIT_TEMPLATE(Mass, Decigrams, (double(std::deci::num) / double(std::deci::den)), dg);
 UNIT_TEMPLATE(Mass, Centigrams, (double(std::centi::num) / double(std::centi::den)), cg);
 UNIT_TEMPLATE(Mass, Milligrams, (double(std::milli::num) / double(std::milli::den)), mg);
