@@ -21,9 +21,14 @@ limitations under the License.
 
 namespace Units
 {
+   class Area;
+   class Length;
+
    class Volume
    {
    public:
+
+      Area operator/(const Length& length) const;
 
       GENERIC_OPERATORS(Volume);
    };
