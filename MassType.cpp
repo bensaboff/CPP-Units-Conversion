@@ -14,15 +14,15 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
-#include "TimeType.h"
-#include "LengthType.h"
-#include "SpeedType.h"
+#include "ForceType.h"
+#include "AccelerationType.h"
+#include "MassType.h"
 
 namespace Units
 {
-   Length Time::operator*(const Speed& speed) const
-   {
-      // Base is seconds
-      return Meters(m_value * MetersPerSecond(speed));
-   }
+    Force Mass::operator*(const Acceleration& acceleration) const
+    {
+        // Newtons use kilograms rather than grams
+        return Newton(m_value * 1000.0 * MetersPerSecondSquared(acceleration));
+    }
 } //end namespace Units

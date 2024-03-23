@@ -20,9 +20,15 @@ limitations under the License.
 
 namespace Units
 {
+   class Mass;
+   class Acceleration;
+
    class Force
    {
    public:
+
+      Mass operator/(const Acceleration& acceleration) const;
+      Acceleration operator/(const Mass& mass) const;
 
       GENERIC_OPERATORS(Force);
    };
@@ -30,7 +36,7 @@ namespace Units
 
 UNIT_TEMPLATE(Force, Newton, 1.0, N);
 UNIT_TEMPLATE(Force, Dyne, 100000.0, dyn);
-UNIT_TEMPLATE(Force, KilogramsForce, (1.0 / 9.80665), KgF); // 1Kg * standard gravitation field
+UNIT_TEMPLATE(Force, KilogramsForce, (1.0 / 9.80665), kgF); // 1kg * standard gravitation field
 UNIT_TEMPLATE(Force, PoundsForce, (4.4482216152605), lbF); // https://en.wikipedia.org/wiki/Pound_(force)#Product_of_avoirdupois_pound_and_standard_gravity
 
 #endif  // FORCETYPE_H_GUARD

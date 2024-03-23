@@ -15,14 +15,19 @@ limitations under the License.
 */
 
 #include "TimeType.h"
-#include "LengthType.h"
 #include "SpeedType.h"
+#include "MassType.h"
+#include "ForceType.h"
+#include "AccelerationType.h"
 
 namespace Units
 {
-   Length Time::operator*(const Speed& speed) const
+   Speed Acceleration::operator*(const Time& time) const
    {
-      // Base is seconds
-      return Meters(m_value * MetersPerSecond(speed));
+      return MetersPerSecond(m_value * Seconds(time));
+   }
+   Force Acceleration::operator*(const Mass& mass) const
+   {
+       return Newton(m_value * Kilograms(mass));
    }
 } //end namespace Units

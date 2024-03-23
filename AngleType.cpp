@@ -15,7 +15,13 @@ limitations under the License.
 */
 
 #include "AngleType.h"
+#include "AngularSpeedType.h"
+#include "TimeType.h"
 
 namespace Units
 {
+   AngularSpeed Angle::operator/(const Time& time) const
+   {
+      return DegreesPerSecond(m_value / Seconds(time));
+   }
 } //end namespace Units

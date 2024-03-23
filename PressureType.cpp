@@ -14,15 +14,21 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
-#include "TimeType.h"
-#include "LengthType.h"
-#include "SpeedType.h"
+#include "AreaType.h"
+#include "ForceType.h"
+#include "PressureType.h"
 
 namespace Units
 {
-   Length Time::operator*(const Speed& speed) const
-   {
-      // Base is seconds
-      return Meters(m_value * MetersPerSecond(speed));
-   }
+    Force Pressure::operator*(const Area& area) const
+    {
+        // Base is Pascals which is Newtons / (m^2)
+        return Newton(m_value * SquareMeters(area));
+    }
+    Area Pressure::operator/(const Force& force) const
+    {
+       // Base is Pascals which is Newtons / (m^2)
+       return SquareMeters(m_value / Newton(force));
+    }
+
 } //end namespace Units
