@@ -22,6 +22,7 @@ limitations under the License.
 
 namespace Units
 {
+   class Area;
    class Time;
    class Speed;
 
@@ -29,6 +30,7 @@ namespace Units
    {
    public:
 
+      Area operator*(const Length& length) const;
       Speed operator/(const Time& time) const;
       Time operator/(const Speed& time) const;
 

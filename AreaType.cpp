@@ -15,7 +15,17 @@ limitations under the License.
 */
 
 #include "AreaType.h"
+#include "LengthType.h"
+#include "VolumeType.h"
 
 namespace Units
 {
+   Volume Area::operator*(const Length& length) const
+   {
+      return CubicMeters(m_value * Meters(length));
+   }
+   Length Area::operator/(const Length& length) const
+   {
+      return Meters(m_value / Meters(length));
+   }
 } //end namespace Units

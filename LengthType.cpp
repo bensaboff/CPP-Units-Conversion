@@ -14,12 +14,18 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
+#include "AreaType.h"
 #include "TimeType.h"
 #include "LengthType.h"
 #include "SpeedType.h"
 
 namespace Units
 {
+   Area Length::operator*(const Length& length) const
+   {
+      // Base is meters
+      return SquareMeters(m_value * Meters(length));
+   }
    Speed Length::operator/(const Time& time) const
    {
       // Base is meters
