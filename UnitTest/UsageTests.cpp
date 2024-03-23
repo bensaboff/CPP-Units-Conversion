@@ -127,7 +127,7 @@ TEST_F(Usage_Test, Verify_Power)
     using namespace Units::Literals;
 
    EXPECT_DOUBLE_EQ(Units::GigaWatts(1.0), Units::GigaWatts(120_dBm));
-   EXPECT_DOUBLE_EQ(100_KW, Units::KiloWatts(80_dBm));
+   EXPECT_DOUBLE_EQ(100_kW, Units::KiloWatts(80_dBm));
    EXPECT_DOUBLE_EQ(10_W, Units::Watts(10_dBW));
    EXPECT_DOUBLE_EQ(Units::Watts(1_MW), Units::Watts(60_dBW));
 }
@@ -136,18 +136,18 @@ TEST_F(Usage_Test, Verify_Temperature)
 {
     using namespace Units::Literals;
 
-    EXPECT_DOUBLE_EQ(Units::Celcius(1.0), 1.0_degC);
+    EXPECT_DOUBLE_EQ(Units::Celsius(1.0), 1.0_degC);
     EXPECT_DOUBLE_EQ(Units::Farenheit(1.0), 1.0_degF);
     EXPECT_DOUBLE_EQ(Units::Kelvin(1.0), 1.0_degK);
     EXPECT_DOUBLE_EQ(Units::Rankine(1.0), 1.0_degR);
-    EXPECT_DOUBLE_EQ(0.0_degC, Units::Celcius(32.0_degF));
-    EXPECT_DOUBLE_EQ(0.0_degC, Units::Celcius(273.16_degK));
-    EXPECT_DOUBLE_EQ(0.0_degC, Units::Celcius(491.69_degR));
+    EXPECT_DOUBLE_EQ(0.0_degC, Units::Celsius(32.0_degF));
+    EXPECT_DOUBLE_EQ(0.0_degC, Units::Celsius(273.15_degK));
+    EXPECT_DOUBLE_EQ(0.0_degC, Units::Celsius(491.67_degR));
     EXPECT_DOUBLE_EQ(212.0_degF, Units::Farenheit(100.0_degC));
-    EXPECT_DOUBLE_EQ(273.16_degK, Units::Kelvin(0_degC)); // test integer conversion
-    EXPECT_DOUBLE_EQ(491.69_degR, Units::Rankine(0.0_degC));
-    //EXPECT_DOUBLE_EQ(Units::Celcius(-40.0_degC), Units::Celcius(-40.0_degF));
-    EXPECT_DOUBLE_EQ(Units::Celcius(-40.0_degC), Units::Celcius(Units::Farenheit(-40.0)));
-    EXPECT_DOUBLE_EQ(100.0_degC, Units::Celcius(212.0_degF));
+    EXPECT_DOUBLE_EQ(273.15_degK, Units::Kelvin(0_degC)); // test integer conversion
+    EXPECT_DOUBLE_EQ(491.67_degR, Units::Rankine(0.0_degC));
+    //EXPECT_DOUBLE_EQ(Units::Celsius(-40.0_degC), Units::Celsius(-40.0_degF));
+    EXPECT_DOUBLE_EQ(Units::Celsius(-40.0_degC), Units::Celsius(Units::Farenheit(-40.0)));
+    EXPECT_DOUBLE_EQ(100.0_degC, Units::Celsius(212.0_degF));
 }
 
