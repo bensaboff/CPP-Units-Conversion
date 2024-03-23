@@ -17,14 +17,21 @@ project(CPP-Units)
 cmake_minimum_required(VERSION 3.15)
 
 set(source_files
-   TimeType.cpp
-   LengthType.cpp
-   SpeedType.cpp
-   AngleType.cpp
-   ForceType.cpp
-   VolumeType.cpp
-   PowerType.cpp
-   TemperatureType.cpp
+    AccelerationType.cpp
+    AngleType.cpp
+    AngularAccelerationType.cpp
+    AngularSpeedType.cpp
+    AngleType.cpp
+    AreaType.cpp
+    ForceType.cpp
+    LengthType.cpp
+    MassType.cpp
+    PowerType.cpp
+    PressureType.cpp
+    SpeedType.cpp
+    TemperatureType.cpp
+    TimeType.cpp
+    VolumeType.cpp
    )
    
 add_library(${PROJECT_NAME} OBJECT ${source_files})

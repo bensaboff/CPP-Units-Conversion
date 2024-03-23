@@ -14,15 +14,8 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
-#include "TimeType.h"
-#include "LengthType.h"
-#include "SpeedType.h"
+#include "AreaType.h"
 
 namespace Units
 {
-   Length Time::operator*(const Speed& speed) const
-   {
-      // Base is seconds
-      return Meters(m_value * MetersPerSecond(speed));
-   }
 } //end namespace Units

@@ -42,7 +42,7 @@ namespace Units
    // https://www.nist.gov/pml/us-surveyfoot/revised-unit-conversion-factors
 UNIT_TEMPLATE(Length, FlightLevel, 0.032808398950131, fl); //  3.2808398950131E-2 fl/m
 UNIT_TEMPLATE(Length, AstronomicalUnits, 149597870700.0, au); // https://physics.nist.gov/cuu/Units/outside.html 1 au = 149 597 870 700 m, exactly
-UNIT_TEMPLATE(Length, DataMiles, 0.0005468066491689, data_mile); //  5.468066491689E-4 data mile per meter
+UNIT_TEMPLATE(Length, DataMiles, (1.0 / 0.0005468066491689), data_mile); //  5.468066491689E-4 data mile per meter
 UNIT_TEMPLATE(Length, NauticalMiles, 1852.0, nmi); // 1852 m/nmi
 UNIT_TEMPLATE(Length, Miles, (25146000.0 / 15625.0), mi); // https://www.sfei.org/it/gis/map-interpretation/conversion-constants#Constants%20are%20exact // 1609.347 218 694 m
 UNIT_TEMPLATE(Length, Leagues, 4828.041656083, league); // 4828.041 656 083 m
@@ -57,7 +57,7 @@ UNIT_TEMPLATE(Length, Inches, (0.3048 / 12.0), in);  // Feet/12
 //Metric
 UNIT_TEMPLATE(Length, Gigameters, (double(std::giga::num) / double(std::giga::den)), Gm);
 UNIT_TEMPLATE(Length, Megameters, (double(std::mega::num) / double(std::mega::den)), Mm);
-UNIT_TEMPLATE(Length, Kilometers, (double(std::kilo::num) / double(std::kilo::den)), Km);
+UNIT_TEMPLATE(Length, Kilometers, (double(std::kilo::num) / double(std::kilo::den)), km);
 UNIT_TEMPLATE(Length, Hectometers, (double(std::hecto::num) / double(std::hecto::den)), Hm);
 UNIT_TEMPLATE(Length, Decameters, (double(std::deca::num) / double(std::deca::den)), Dm);
 UNIT_TEMPLATE(Length, Meters, 1.0, m);

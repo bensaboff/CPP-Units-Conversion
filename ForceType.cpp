@@ -14,8 +14,21 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
+#include "MassType.h"
+#include "AccelerationType.h"
 #include "ForceType.h"
 
 namespace Units
 {
+    Mass Force::operator/(const Acceleration& acceleration) const
+    {
+        // Base is Newtons which is 1 kg * (m/s^2)
+        return Kilograms(m_value / MetersPerSecondSquared(acceleration));
+    }
+
+    Acceleration Force::operator/(const Mass& mass) const
+    {
+       // Base is Newtons which is 1 kg * (m/s^2)
+        return MetersPerSecondSquared(m_value / Kilograms(mass));
+    }
 } //end namespace Units

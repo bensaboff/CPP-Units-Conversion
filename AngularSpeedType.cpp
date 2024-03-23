@@ -14,15 +14,20 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
+#include "AngularSpeedType.h"
+#include "AngularAccelerationType.h"
+#include "AngleType.h"
 #include "TimeType.h"
-#include "LengthType.h"
-#include "SpeedType.h"
 
 namespace Units
 {
-   Length Time::operator*(const Speed& speed) const
+   Angle AngularSpeed::operator*(const Time& time) const
    {
-      // Base is seconds
-      return Meters(m_value * MetersPerSecond(speed));
+      // Base is Degrees per Second
+      return Degrees(m_value * Seconds(time));
+   }
+   AngularAcceleration AngularSpeed::operator/(const Time& time) const
+   {
+       return DegreesPerSecondSquared(m_value / Seconds(time));
    }
 } //end namespace Units
