@@ -27,8 +27,8 @@ namespace Units
    {
    public:
 
-      Force Pressure::operator*(const Area& area) const;
-      Area Pressure::operator/(const Force& force) const;
+      Force operator*(const Area& area) const;
+      Area operator/(const Force& force) const;
 
       GENERIC_OPERATORS(Pressure);
    };
