@@ -37,13 +37,14 @@ namespace Units
 } //end namespace Units
 
 UNIT_TEMPLATE(AngularSpeed, DegreesPerSecond, 1.0, deg_s);
-UNIT_TEMPLATE(AngularSpeed, DegreesPerMinute, 60.0, deg_m);
-UNIT_TEMPLATE(AngularSpeed, DegreesPerHour, 3600.0, deg_hr);
+UNIT_TEMPLATE(AngularSpeed, DegreesPerMinute, (1.0 / 60.0), deg_m);
+UNIT_TEMPLATE(AngularSpeed, DegreesPerHour, (1.0 / 3600.0), deg_hr);
 UNIT_TEMPLATE(AngularSpeed, RadiansPerSecond, (180.0 / 3.1415926535897932384626433832795028841971), rad_s);
-UNIT_TEMPLATE(AngularSpeed, MilliradiansPerSecond, (180.0 / 3200.0), mil_s);
+UNIT_TEMPLATE(AngularSpeed, MilliradiansPerSecond, (180.0 / 3200.0), mil_s); // 6,400 milliradians for a full circle // DECIDE: This is an old standard, current appears to be 6283/full circle
+// See: https://en.wikipedia.org/wiki/Milliradian, should each exist for compatibility? Should only the old or only the new be used?
 UNIT_TEMPLATE(AngularSpeed, BAMS_PerSecond, (180.0), bams_s);
 UNIT_TEMPLATE(AngularSpeed, RevolutionPerSecond, (360.0), rps);
-UNIT_TEMPLATE(AngularSpeed, RevolutionPerMinute, ((360.0) * 60), rpm);
-UNIT_TEMPLATE(AngularSpeed, RevolutionPerHour, ((360.0) * 3600), rph);
+UNIT_TEMPLATE(AngularSpeed, RevolutionPerMinute, ((360.0) / 60), rpm);
+UNIT_TEMPLATE(AngularSpeed, RevolutionPerHour, ((360.0) / 3600), rph);
 
 #endif  // ANGULARSPEEDTYPE_H_GUARD

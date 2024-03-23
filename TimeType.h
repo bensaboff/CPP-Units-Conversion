@@ -44,9 +44,9 @@ UNIT_TEMPLATE(Time, NonLeapYearMonths, 2628000, non_leap_yr_mon); // Based on 12
 UNIT_TEMPLATE(Time, Months, 2629800, mon); // Based on 12 months per year
 UNIT_TEMPLATE(Time, Weeks, 604800, wk);
 UNIT_TEMPLATE(Time, Days, 86400, day);
-UNIT_TEMPLATE(Time, Hours, 3600, hr);
+UNIT_TEMPLATE(Time, Hours, 3600.0, hr);
 UNIT_TEMPLATE(Time, Minutes, 60, min);
-UNIT_TEMPLATE(Time, Seconds, 1, s);
+UNIT_TEMPLATE(Time, Seconds, 1.0, s);
 UNIT_TEMPLATE(Time, Milliseconds, (double(std::milli::num) / double(std::milli::den)), ms);
 UNIT_TEMPLATE(Time, Microseconds, (double(std::micro::num) / double(std::micro::den)), us);
 UNIT_TEMPLATE(Time, Nanoseconds, (double(std::nano::num) / double(std::nano::den)), ns);

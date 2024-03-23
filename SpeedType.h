@@ -38,7 +38,7 @@ namespace Units
 // As modeled in the International Standard Atmosphere, dry air at mean sea level, standard temperature of 15 °C (59 °F)
 UNIT_TEMPLATE(Speed, Mach, 340.3, mach); // Mach = 340.3 m/s (https://en.wikipedia.org/wiki/Mach_number#Overview)
 UNIT_TEMPLATE(Speed, Knots, (1852.0 / 3600.0), kt); // https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication811e2008.pdf 1 nautical mile per hour = (1852/3600) m/s 
-UNIT_TEMPLATE(Speed, MetersPerHour, 3600.0, meter_per_hour); // (1 m) / (1/3600 hr/sec)
+UNIT_TEMPLATE(Speed, MetersPerHour, (1.0 / 3600.0), meter_per_hour); // (1 m) / (1/3600 hr/sec)
 UNIT_TEMPLATE(Speed, FeetPerMinute, 0.00508, fpm); // (0.3048 m/ft) / (60 min/sec)
 UNIT_TEMPLATE(Speed, FeetPerSecond, 0.3048, fps); // (0.3048 m/ft)
 UNIT_TEMPLATE(Speed, MilesPerHour, (1609.344 / 3600), mph); // (1609.344 m/mi) / (3600 sec/hr)

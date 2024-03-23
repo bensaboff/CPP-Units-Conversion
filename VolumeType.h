@@ -35,9 +35,9 @@ UNIT_TEMPLATE(Volume, Quart, (3.785411784 / 4.0), quart);
 UNIT_TEMPLATE(Volume, Pint, (3.785411784 / 8.0), pint);
 UNIT_TEMPLATE(Volume, FluidOunces, (3.785411784 / 128.0), floz);
 UNIT_TEMPLATE(Volume, Fifth, (3.785411784 / 5.0), fifth);
-UNIT_TEMPLATE(Volume, CubicMeters, (0.001), m3);
-UNIT_TEMPLATE(Volume, CubicCentimeters, (1000.0), cm3);
-UNIT_TEMPLATE(Volume, CubicYard, (0.00130795062), yd3);
+UNIT_TEMPLATE(Volume, CubicMeters, (1000.0), m3);
+UNIT_TEMPLATE(Volume, CubicCentimeters, (0.001), cm3);
+UNIT_TEMPLATE(Volume, CubicYard, (1.0 / 0.00130795062), yd3);
 UNIT_TEMPLATE(Volume, CubicInches, (3.785411784 / 231.0), in3);
 
 //Metric

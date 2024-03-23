@@ -68,9 +68,10 @@ namespace Units
 
 UNIT_TEMPLATE(Angle, Degrees, 1.0, deg); // 360 degrees for a full circle
 UNIT_TEMPLATE(Angle, Radians, (180.0 / 3.1415926535897932384626433832795028841971), rad); // 2pi radians for a full circle
-UNIT_TEMPLATE(Angle, Milliradians, (180.0 / 3200.0), mil); // 6,400 milliradians for a full circle
+UNIT_TEMPLATE(Angle, Milliradians, (180.0 / 3200.0), mil); // 6,400 milliradians for a full circle // DECIDE: This is an old standard, current appears to be 6283/full circle
+// See: https://en.wikipedia.org/wiki/Milliradian, should each exist for compatibility? Should only the old or only the new be used?
 UNIT_TEMPLATE(Angle, BAMS, (180.0), bams); // 2 for a full circle
-UNIT_TEMPLATE(Angle, Revolution, (1.0 / 360.0), rev); // Full circle
+UNIT_TEMPLATE(Angle, Revolution, (360.0), rev); // Full circle
 UNIT_TEMPLATE(Angle, ArcMinute, (1.0 / 60.0), arc_min);
 UNIT_TEMPLATE(Angle, ArcSecond, (1.0 / 3600.0), arc_sec);
 

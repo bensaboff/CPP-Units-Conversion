@@ -29,7 +29,7 @@ namespace Units
    };
 } //end namespace Units
 
-UNIT_TEMPLATE(Power, HorsePower, (1.0 / 745.7), hp);
+UNIT_TEMPLATE(Power, HorsePower, (745.7), hp);
 UNIT_TEMPLATE_EQUATION(Power, decibelWatts, (std::pow(10, (input / 10.0))), (10.0 * std::log10(m_value)), dBW);
 UNIT_TEMPLATE_EQUATION(Power, decibelMilliwatts, (std::pow(10, (input / 10.0)) * (double(std::milli::num) / double(std::milli::den))),
    (10.0 * std::log10(m_value * (double(std::milli::den) / double(std::milli::num)))), dBm);
