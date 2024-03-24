@@ -23,12 +23,15 @@ namespace Units
 {
    class Force;
    class Acceleration;
+   class Density;
+   class Volume;
 
    class Mass
    {
    public:
 
       Force operator*(const Acceleration& acceleration) const;
+      Density operator/(const Volume& volume) const;
 
       GENERIC_OPERATORS(Mass);
    };
