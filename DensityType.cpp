@@ -14,21 +14,15 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
-#include "MassType.h"
-#include "AccelerationType.h"
 #include "DensityType.h"
-#include "ForceType.h"
+#include "MassType.h"
 #include "VolumeType.h"
 
 namespace Units
 {
-    Force Mass::operator*(const Acceleration& acceleration) const
+   Mass Density::operator*(const Volume& volume) const
     {
-        // Newtons use kilograms rather than grams
-        return Newton(m_value * 1000.0 * MetersPerSecondSquared(acceleration));
-    }
-    Density Mass::operator/(const Volume& volume) const
-    {
-       return GramsPerMilliliter(m_value / Milliliters(volume));
+        // Base is Kilograms per Cubic Meter which is 1 kg / (m^3)
+        return Kilograms(m_value * CubicMeters(volume));
     }
 } //end namespace Units

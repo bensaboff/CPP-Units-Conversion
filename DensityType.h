@@ -1,3 +1,5 @@
+#ifndef DENSITYTYPE_H_GUARD
+#define DENSITYTYPE_H_GUARD
 /*
 Copyright 2022 Ben Saboff
 
@@ -14,21 +16,27 @@ See the License for the specific language governing permissionsand
 limitations under the License.
 */
 
-#include "MassType.h"
-#include "AccelerationType.h"
-#include "DensityType.h"
-#include "ForceType.h"
-#include "VolumeType.h"
+#include "UnitBase.h"
 
 namespace Units
 {
-    Force Mass::operator*(const Acceleration& acceleration) const
-    {
-        // Newtons use kilograms rather than grams
-        return Newton(m_value * 1000.0 * MetersPerSecondSquared(acceleration));
-    }
-    Density Mass::operator/(const Volume& volume) const
-    {
-       return GramsPerMilliliter(m_value / Milliliters(volume));
-    }
+   class Mass;
+   class Volume;
+
+   class Density
+   {
+   public:
+
+      Mass operator*(const Volume& volume) const;
+
+      GENERIC_OPERATORS(Density);
+   };
 } //end namespace Units
+
+UNIT_TEMPLATE(Density, KilogramsPerCubicMeter, 1.0, kg_m3);
+UNIT_TEMPLATE(Density, KilogramsPerLiter, 0.001, kg_L);
+UNIT_TEMPLATE(Density, GramsPerCubicCentimeter, (0.001), g_cm3);
+UNIT_TEMPLATE(Density, GramsPerMilliliter, (0.001), g_mL);
+UNIT_TEMPLATE(Density, TonnesPerCubicMeter, (1/1000), t_m3); // 1000 Kg per Tonne
+
+#endif  // DENSITYTYPE_H_GUARD
